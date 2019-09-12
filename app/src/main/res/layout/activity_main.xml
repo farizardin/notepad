@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:textStyle="bold"
+            android:id="@+id/boldtext"
+            android:onClick="onClick"
+            />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_toRightOf="@+id/boldtext"
+            android:text="I"
+            android:id="@+id/italictext"
+            android:onClick="onClick"
+            />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:text="N"
+            android:layout_toRightOf="@+id/italictext"
+            android:id="@+id/normaltext"
+            android:onClick="onClick"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:text="Size"
+            android:layout_width="wrap_content"
+            android:id="@+id/fontsize"
+            android:layout_toRightOf="@+id/normaltext"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy"
+            android:id="@+id/copytext"
+            android:layout_toRightOf="@+id/fontsize"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new"
+            android:layout_toRightOf="@+id/copytext"
+            android:id="@+id/newdoc"
+            />
+
+    </LinearLayout>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/mainpart"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:ems="100"
+        android:gravity="top|left"
+        android:padding="10dp"
+        android:inputType="textMultiLine"
+        android:hint="Welcome to Notepoint"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/boldtext"/>
+</LinearLayout>
